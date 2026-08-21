@@ -11,7 +11,7 @@ class Database {
         $this->db_user = $_ENV['DB_USER'] ?? '';
         $this->db_pass = $_ENV['DB_PASS'] ?? '';
     }
-}
+
 
   function connect()
   {
@@ -23,6 +23,7 @@ class Database {
       exit("Database connection failed: " . $e->getMessage());
     }
  }
+
 }
 
 $db = new Database();
